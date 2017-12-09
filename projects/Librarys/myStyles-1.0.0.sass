@@ -1,0 +1,169 @@
+$darkText: #000
+$lightText: #fff
+$red: #c62828
+$redLight: #ff5f52
+$redDark: #8e0000
+$indigo: #283593
+$indigoLight: #5f5fc4
+$indigoDark: #001064
+$lightBlue: #039be5
+$lightBlueLight: #63ccff
+$lightBlueDark: #006db3
+$lightGreen: #76ff03
+$lightGreenLight: #b0ff57
+$lightGreenDark: #32cb00
+$yellow: #ffff00
+$yellowLight: #ffff5a
+$yellowDark: #c7cc00
+$deepOrange: #ff3d00
+$deepOrangeLight: #ff7539
+$deepOrangeDark: #c30000
+$grey: #9e9e9e
+$greyLight: #cfcfcf
+$greyDark: #707070
+*
+  transition: 100ms ease-in-out
+html, body
+  height: 100%
+  width: 100%
+  margin: 0
+  padding: 0
+  border: 0
+  outline: 0
+  font-size: 14px
+  font-family: "Roboto", "Georgia" ,serif
+  color: #202121
+
+
+button, input[type="button"]
+  color: rgba($darkText, 0.9)
+  letter-spacing: 2px
+  padding: 5px
+  margin: 3px
+  font-size: 1.5em
+  background: #5472d3
+  border: 0
+  border-radius: 2px
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12)
+  transition: box-shadow 1s cubic-bezier(.04,1.45,.84,.87)
+  &:hover
+    box-shadow: 0 6px 5px -3px rgba(10, 10, 10, 0.8), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12)
+  &:active
+    box-shadow: 0 5px 3px -3px rgba(115, 115, 115, 0.74)
+
+
+.scrollContainer
+  position: relative
+  overflow: hidden
+.wrapper
+  position: absolute
+  top: 0
+  width: 100%
+  height: 100%
+  box-sizing: border-box
+  height: auto
+  transition: margin-top 300ms linear
+  margin: 0
+.scroller
+  position: absolute
+  width: 10px
+  height: 10px
+  border-radius: 3px
+  background: rgba($greyLight, 0.72)
+  top: 0
+  right: 0
+  transition: margin-top 300ms linear
+  box-shadow: 0 0 2px 4px rgba(#454545, 0.3), 0 0 5px 5px rgba(#454545, 0.2)
+  z-index: 100
+  &:hover
+    box-shadow: 0 0 2px 4px rgba($grey, 0.3), 0 0 5px 5px rgba($greyDark, 0.2)
+    background: rgba($grey, 0.82)
+  &:active
+    box-shadow: 0 0 2px 2px rgba(#454545, 0.5)
+    background: rgba($greyDark, 0.62)
+
+.flowMenu
+  position: relative
+  display: block
+  width: 100%
+  height: 50%
+  overflow: hidden
+  box-shadow: 0 2px 2px 3px rgba(#868686, 0.3), 0 0 1px 0 rgba(#868686, 0.4)
+  .slide
+    position: absolute
+    height: 100%
+    width: 100%
+    transform: translate(100%)
+    box-sizing: border-box
+    z-index: 0
+    opacity: 0
+    &.actual
+      transform: translate(0)
+      opacity: 1
+      z-index: 20
+    &.left_in
+      opacity: 1
+      z-index: 10
+      animation: left_in 1000ms ease-in-out forwards
+      @keyframes left_in
+        0%
+          transform: translateX(-100%)
+        100%
+          transform: translate(0)
+    &.right_in
+      opacity: 1
+      z-index: 10
+      animation: right_in 1000ms ease-in-out forwards
+      @keyframes right_in
+        0%
+          transform: translateX(100%)
+        100%
+          transform: translate(0)
+    &.left_out
+      opacity: 1
+      z-index: 10
+      animation: left_out 1000ms ease-in-out forwards
+      @keyframes left_out
+        0%
+          transform: translateX(0)
+        100%
+          transform: translate(100%)
+    &.right_out
+      opacity: 1
+      z-index: 10
+      animation: right_out 1000ms ease-in-out forwards
+      @keyframes right_out
+        0%
+          transform: translateX(0)
+        100%
+          transform: translate(-100%)
+  .counter
+    position: absolute
+    display: flex
+    width: auto
+    height: 10px
+    bottom: 0
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: 40
+    .fmDot
+      display: block
+      width: 10px
+      height: 10px
+      margin: 5px
+      background: rgba($deepOrange, 0.8)
+      border-radius: 50%
+      margin-top: 0
+      &.actual
+        background: $deepOrangeDark
+  .arrow
+    font-size: 4em
+    position: absolute
+    color: rgba(#3A3A3B, 0.84)
+    top: 50%
+    transform: translate(0, -50%)
+    z-index: 40
+  .arrowLeft
+    left: 0
+  .arrowRight
+    right: 0

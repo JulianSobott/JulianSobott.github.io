@@ -1,0 +1,25 @@
+{
+  "version": "1.0.01",
+  "name": "Tank App0.1",
+  "launch_path": "/Tank_app/index.html",
+  "description": "App um Tank Daten auf zu zeichen",
+  "icons": {
+    "128": "/images/touch/icon-128x128.png"
+  },
+  "developer": {
+    "name": "",
+    "url": ""
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "default_locale": "de",
+  "permissions": {
+  },
+  "locales": {
+    "de": {
+      "name": "Tank App",
+      "description": "App um Tank Daten auf zu zeichen"
+    }
+  }
+}

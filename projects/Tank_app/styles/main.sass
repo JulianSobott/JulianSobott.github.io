@@ -1,0 +1,178 @@
+$primary: #f44336
+$pLight: #ff7961
+$pDark: #ba000d
+$secondary: #ff3d00
+$sLight: #ff7539
+$sDark: #c30000
+$textP: #212121
+$textS: #000000
+
+*
+  box-sizing: border-box
+  transition: all 300ms ease-in-out
+.container
+  box-shadow: 0px 3px 3px 2px #9D9D9D
+
+.fullScreen
+  width: calc(100vw - 16px) !important
+  height: calc(100vh - 16px) !important
+  box-shadow: 0px 3px 3px 2px #9D9D9D !important
+  z-index: 100 !important
+  position: fixed !important
+  top: 0 !important
+  left: 0 !important
+  margin: 8px !important
+  background: rgba(#069A86, 1)
+  animation: openFullScreen 300ms ease-in-out forwards
+  @keyframes openFullScreen
+    0%
+      transform: scale(0)
+    100%
+      transform: scale(1)
+html, body
+  font-family: 'Roboto', 'Helvetica', sans-serif
+  margin: 0
+  padding: 0
+  height: 100%
+  font-size: 18px
+  //background: rgba($pLight, 0.2)
+
+  header
+    background: $pDark
+    height: 10%
+    font-size: 2em
+    text-align: center
+    box-shadow: 0 2px 5px rgba(0,0,0,.26)
+    span
+      float: left
+    h1
+      font-size: 0.7em
+      display: inline
+      color: rgba($textP, 0.8)
+
+  #listOfCars
+    width: 100%
+    text-align: center
+    height: 100%
+    background: rgba($pLight, 0.2)
+    .carBtn
+      width: 90vw
+      height: calc(50vw - 4vw)
+      margin: 5vw
+      box-sizing: border-box
+      float: left
+      //height: 3em
+      box-shadow: 0 2px 5px rgba(0,0,0,.26)
+      border-radius: 3px
+      font-size: 24px
+      padding: 5% 5%
+      hyphens: auto
+      word-wrap: normal
+      word-break: break-all
+      overflow: hidden
+      background: $primary
+      border: 0px
+      color: rgba($textP, 0.9)
+
+  #fuel
+    #carNameH2
+      width: 100%
+      background: linear-gradient(45deg, rgba(#160955, 0.84),#160955, #00BDA0)
+      color: #A198CD
+      text-align: center
+      margin: 0
+
+    input
+      height: 2em
+      font-size: 1em
+      width: 98%
+      padding: 1%
+      margin-top: 10%
+      border-radius: 5px 3px
+      &:focus
+        border: 2px solid rgb(33, 0, 250)
+      &.valid
+        border: 2px solid rgb(0, 247, 2)
+        background: rgba(0, 247, 2, 0.3)
+      &.invalid
+        border: 2px solid rgb(255, 0, 0)
+        background: rgba(255, 0, 0, 0.3)
+
+    button
+      border-radius: 50%
+      font-size: 3em
+      background: #878787
+      float: right
+      margin: 5% 10%
+      &[name="submit"]
+        color: green
+      &[name="clear"]
+        color: red
+
+  #home
+    height: 90%
+    overflow-y: hidden
+
+    .closeFullScreen
+      z-index: 1010
+      position: fixed
+      top: 0
+      right: 0
+      font-size: 24px
+      line-height: 24px
+      height: 30px
+      width: 30px
+      text-align: center
+      font-style: normal
+      background: rgba(#1A1820, 0.92)
+      color: #D70404
+      border-radius: 50%
+      padding: 5px
+
+    .homeContainer
+      box-sizing: border-box
+      width: calc(100% - 8px)
+      height: calc(50% - 8px)
+      margin: 4px
+      position: relative
+      overflow: hidden
+      z-index: 10
+
+      .homeContainer_header
+        background: rgba(#0002C8, 0.79)
+        height: 30px
+        line-height: 30px
+        text-align: center
+        position: fixed
+        width: inherit
+        h2
+          margin: 0
+          color: #f4f4f4
+          font-size: .7em
+
+      .homeContainer_body
+        margin-top: 30px
+        width: 100%
+        overflow: auto
+      .carStatistics
+        box-sizing: border-box
+        width: calc(50% - 10px)
+        margin: 5px 10px
+        height: calc(100% - 40px)
+        border: 1px solid #9D9D9D
+        position: absolute
+        .carHeader
+          background: rgba(#CB1A2A, 0.79)
+          height: 15px
+          line-height: 15px
+          text-align: center
+          position: fixed
+          width: 100%
+          position: absolute
+          font-size: 13px
+          color: #f4f4f4
+      @for $i from 1 through 5
+        .carStatistics:nth-child(#{$i})
+          margin-left: (50%) * ($i - 1) + 1%
+    .cars
+      overflow: scroll

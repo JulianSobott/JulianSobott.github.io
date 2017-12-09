@@ -1,0 +1,418 @@
+.info_register {
+  text-align: center;
+  font-size: 1.5em;
+  color: #F66000; }
+  .info_register a {
+    color: #522AE2; }
+
+.registerContainer {
+  width: 25em;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background: #2E3236;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top: 2%;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 5px #777; }
+  .registerContainer .hRegister {
+    font-size: 3em;
+    color: #C2BDBD;
+    margin: 0;
+    padding-bottom: 2%; }
+  .registerContainer .register {
+    padding: 10% 0 10% 1%;
+    border-top: 2px groove #222;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #BBBBBB;
+    text-align: center;
+    box-sizing: border-box; }
+    .registerContainer .register label {
+      display: block;
+      padding: 1em;
+      padding-bottom: 0.7em;
+      font-size: 1.3em;
+      color: #545554; }
+      .registerContainer .register label input {
+        margin-top: 1%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 70%;
+        font-size: 1.2rem;
+        border: 2px solid #545554;
+        border-radius: 4px; }
+      .registerContainer .register label .errorClass {
+        border: 2px solid #f44; }
+      .registerContainer .register label .error {
+        font-size: 0.7em;
+        color: #f44; }
+    .registerContainer .register .btnRegister {
+      font-size: 2rem;
+      padding: 1%;
+      background: rgba(89, 90, 94, 0.85); }
+      .registerContainer .register .btnRegister:hover {
+        background: rgba(89, 90, 94, 0.6);
+        cursor: pointer; }
+
+@media only screen and (max-width: 480px) {
+  .registerContainer {
+    width: 99%;
+    margin: 5% 0.5% 5% 0.5%; } }
+.loginContainer {
+  width: 25em;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background: #2E3236;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top: 2%;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 5px #777; }
+  .loginContainer .hLogin {
+    font-size: 3em;
+    color: #C2BDBD;
+    margin: 0;
+    padding-bottom: 2%; }
+  .loginContainer .login {
+    padding: 10% 0 10% 1%;
+    border-top: 2px groove #222;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #BBBBBB;
+    text-align: center;
+    box-sizing: border-box; }
+    .loginContainer .login label {
+      display: block;
+      padding: 1em;
+      padding-bottom: 0.7em;
+      font-size: 1.3em;
+      color: #545554; }
+      .loginContainer .login label input {
+        margin-top: 1%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 70%;
+        font-size: 1.2rem;
+        border: 2px solid #545554;
+        border-radius: 4px; }
+      .loginContainer .login label .errorClass {
+        border: 2px solid #f44; }
+      .loginContainer .login label .error {
+        font-size: 0.7em;
+        color: #f44; }
+    .loginContainer .login .btnAnmelden {
+      font-size: 2rem;
+      margin-top: 10%;
+      padding: 1%;
+      background: rgba(89, 90, 94, 0.85); }
+      .loginContainer .login .btnAnmelden:hover {
+        background: rgba(89, 90, 94, 0.6);
+        cursor: pointer; }
+
+@media only screen and (max-width: 480px) {
+  .loginContainer {
+    width: 100%;
+    margin: 5% 0 5% 0; } }
+html, body {
+  height: 100%; }
+  html .guideContent, body .guideContent {
+    padding-bottom: 10%; }
+
+.body .toggleSidebar {
+  font-size: 3em !important;
+  position: absolute;
+  left: 1%;
+  margin-top: 0;
+  z-index: 2; }
+.body .seitenmenue {
+  position: absolute;
+  width: 30%;
+  background: rgba(34, 34, 34, 0.63);
+  padding: 5%;
+  padding-left: 1%;
+  z-index: 0;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto; }
+  .body .seitenmenue ul {
+    list-style: none; }
+    .body .seitenmenue ul li, .body .seitenmenue ul a {
+      color: rgba(17, 17, 17, 0.8);
+      font-size: 1.5em;
+      padding: 1rem;
+      text-decoration: none; }
+      .body .seitenmenue ul li:hover, .body .seitenmenue ul a:hover {
+        color: black;
+        cursor: pointer; }
+.body .content {
+  position: absolute;
+  padding-left: 4rem;
+  margin-right: auto;
+  background: #cbcccc;
+  top: 0;
+  bottom: 50px;
+  min-height: 90%;
+  width: 100%;
+  overflow-y: auto;
+  z-index: 1; }
+  .body .content .meineKarten {
+    overflow-y: auto; }
+    .body .content .meineKarten .kartenBilder {
+      margin-right: 1px;
+      margin-left: 5%; }
+  .body .content h2 {
+    margin-left: 50px;
+    margin-top: 0 !important; }
+  .body .content .btnMap {
+    width: 16rem;
+    height: 16rem;
+    background: rgba(13, 66, 103, 0.3);
+    border: 2px solid #288;
+    border-radius: 5px 10px;
+    text-align: center;
+    padding: 0;
+    margin-left: 2rem;
+    margin-bottom: 2em; }
+    .body .content .btnMap:hover > img {
+      filter: brightness(40%) grayscale(70%); }
+    .body .content .btnMap:hover > .option_field {
+      animation: rotate-in 200ms ease-in forwards; }
+@keyframes rotate-in {
+  0% {
+    transform: rotateX(90deg); }
+  100% {
+    transform: rotate(0); } }
+    .body .content .btnMap .map_name {
+      position: absolute;
+      font-size: 2em;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2em;
+      background: #5aa; }
+    .body .content .btnMap .option_field {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 4em;
+      background: rgba(85, 170, 170, 0.8);
+      transform: rotateX(90deg);
+      transform-origin: top; }
+      .body .content .btnMap .option_field .o_field {
+        float: left;
+        display: inline-block; }
+        .body .content .btnMap .option_field .o_field:hover {
+          padding-right: 2%;
+          padding-left: 2%; }
+        .body .content .btnMap .option_field .o_field .material-icons {
+          font-size: 4em; }
+        .body .content .btnMap .option_field .o_field.delete {
+          margin-left: 1%;
+          float: left; }
+        .body .content .btnMap .option_field .o_field.edit {
+          float: right; }
+    .body .content .btnMap img {
+      max-width: 100%;
+      height: 80%; }
+    .body .content .btnMap:hover {
+      cursor: default;
+      filter: contrast(100%); }
+  .body .content .btnNeueKarteHinzufuegen {
+    padding: 1%;
+    font-size: 1.5em;
+    filter: grayscale(40%); }
+    .body .content .btnNeueKarteHinzufuegen:hover {
+      cursor: default;
+      border-radius: 10px 20px;
+      filter: grayscale(0%); }
+    .body .content .btnNeueKarteHinzufuegen .add {
+      display: inline-block;
+      font-size: 3em; }
+    .body .content .btnNeueKarteHinzufuegen p {
+      display: inline-block;
+      font-size: 1.3em; }
+  .body .content .neueKarte {
+    height: 200px;
+    width: 200px;
+    background: #222; }
+
+#toggleSidebar {
+  display: none; }
+  #toggleSidebar:checked + .body .toggleSidebar {
+    left: 25%; }
+  #toggleSidebar:checked + .body .content {
+    animation: openMenu 200ms ease-in-out forwards; }
+@keyframes openMenu {
+  0% {
+    margin-left: 0; }
+  100% {
+    margin-left: 30%; } }
+.footer {
+  margin-top: 0 !important; }
+
+@media only screen and (max-width: 480px) {
+  .seitenmenue {
+    width: 90% !important; }
+
+  #toggleSidebar {
+    display: none; }
+    #toggleSidebar:checked + .body .toggleSidebar {
+      left: 80%; }
+
+  @keyframes openMenu {
+    0% {
+      margin-left: 0; }
+    100% {
+      margin-left: 90%; } } }
+body, html {
+  width: 100%;
+  height: 100%; }
+
+.startInfo {
+  position: relative;
+  padding-top: 2rem;
+  background: red;
+  background: linear-gradient(70deg, #53C8DD, #073FD0, #113EC4);
+  background-size: cover;
+  min-height: 450px; }
+  .startInfo .creativeElements .rect {
+    display: inline-block;
+    position: absolute;
+    border: 1px solid rgba(2, 0, 105, 0.42);
+    width: 500px;
+    height: 100px;
+    transform: skew(130deg, 20deg);
+    opacity: 20%; }
+  .startInfo .creativeElements .rect1 {
+    margin: 100px 200px;
+    background: linear-gradient(-70deg, rgba(2, 0, 105, 0.42), #53C8DD);
+    z-index: 0; }
+  .startInfo .creativeElements .rect2 {
+    margin: 10px 20px;
+    background: linear-gradient(-70deg, rgba(2, 0, 105, 0.42), #53C8DD); }
+  .startInfo .creativeElements .rect3 {
+    margin: 60px -65px;
+    background: linear-gradient(-70deg, rgba(2, 0, 105, 0.42), #53C8DD); }
+  .startInfo .row .bildershow {
+    display: block; }
+  .startInfo .row .col-md-4 {
+    filter: grayscale(0); }
+    .startInfo .row .col-md-4 .logo_start {
+      width: auto;
+      height: 100%;
+      display: block;
+      z-index: 100; }
+  .startInfo .row .col-md-8 {
+    align-items: center;
+    padding-top: 10%;
+    display: inline-block;
+    z-index: 20; }
+    .startInfo .row .col-md-8 .btn {
+      font-size: 2em;
+      box-shadow: 0 0 2px 1px #07C2F4; }
+  .startInfo .row blockquote {
+    border-left: 5px solid #B5E0FC;
+    border-radius: 10px; }
+    .startInfo .row blockquote p {
+      text-transform: uppercase;
+      margin-top: 0;
+      padding: 1%;
+      display: block;
+      left: 20%;
+      font-size: 3em;
+      color: #07C2F4;
+      text-shadow: 4px 4px 1px #047391;
+      font-weight: bold; }
+
+.content {
+  padding-bottom: 10%; }
+  .content .row {
+    margin-top: 5rem;
+    padding-bottom: 1rem; }
+    .content .row:first-child {
+      border-bottom: 2px groove rgba(13, 0, 185, 0.79); }
+    .content .row .bild {
+      float: left;
+      width: 50%;
+      height: auto;
+      margin: 0 5% 5% 0; }
+
+.btn {
+  margin-left: 6rem;
+  margin-top: 2rem;
+  font-size: 3em;
+  margin-bottom: 1rem; }
+
+.btn {
+  font-size: 1.5em; }
+
+.startInfo .row {
+  max-height: 40%; }
+  .startInfo .row .col-md-4 {
+    height: 100% !important; }
+    .startInfo .row .col-md-4 .logo_start {
+      height: 20vh; }
+
+@media only screen and (max-width: 480px) {
+  .startInfo {
+    height: 100vh; }
+
+  .logo_start {
+    width: 15% !important;
+    height: auto !important;
+    position: absolute;
+    left: 50%;
+    top: 1%; }
+
+  .h2 {
+    font-size: 2em !important;
+    text-align: center; }
+
+  .btn {
+    width: 100% !important;
+    margin-left: 0;
+    font-size: 2em; } }
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  overflow-x: hidden; }
+  html .container_index, body .container_index {
+    min-height: 100%;
+    width: 100%;
+    position: relative;
+    padding: 0 !important;
+    margin: 0 !important; }
+    html .container_index .navbar, body .container_index .navbar {
+      margin-bottom: 0 !important; }
+    html .container_index .content_index, body .container_index .content_index {
+      padding-bottom: 50px; }
+    html .container_index .footer, body .container_index .footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 50px; }
+
+@media only screen and (max-width: 765px) {
+  .footer {
+    height: 150px !important; }
+
+  .content_index {
+    padding-bottom: 150px !important; } }
+
+/*# sourceMappingURL=template.css.map */

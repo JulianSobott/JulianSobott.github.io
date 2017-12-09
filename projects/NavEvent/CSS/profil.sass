@@ -1,0 +1,180 @@
+$heightSMenu: 90%
+$widthSMenu: 30%
+body
+  //background: lighten(#7E807F, 30)
+
+.body
+
+  .toggleSidebar
+    font-size: 3em !important
+    position: absolute
+    left: 1%
+    margin-top: 0
+    z-index: 2
+
+  .seitenmenue
+    position: absolute
+    width: $widthSMenu
+    background: rgba(#222, 0.63)
+    padding: 5%
+    padding-left: 1%
+    z-index: 0
+    top: 0
+    bottom: 0
+    overflow-y: auto
+
+    ul
+      list-style: none
+      li, a
+        color: rgba(#111, 0.8)
+        font-size: 1.5em
+        padding: 1rem
+        text-decoration: none
+
+        &:hover
+          color: rgba(#000, 1)
+          cursor: pointer
+
+  .content
+    position: absolute
+    padding-left: 4rem
+    margin-right: auto
+    background: lighten(#7E807F, 30)
+    top: 0
+    bottom: 50px
+    min-height: 90%
+    width: 100%
+    overflow-y: auto
+    z-index: 1
+
+    .meineKarten
+      overflow-y: auto
+      .kartenBilder
+        margin-right: 1px
+        margin-left: 5%
+
+    h2
+      margin-left: 50px
+      margin-top: 0 !important
+
+
+    .btnMap
+      width: 16rem
+      height: 16rem
+      background: rgba(#0D4267, 0.3)
+      border: 2px solid #288
+      border-radius: 5px 10px
+      text-align: center
+      //padding: 10px 2px 2px 2px
+      padding: 0
+      margin-left: 2rem
+      margin-bottom: 2em
+      &:hover >img
+        filter: brightness(40%) grayscale(70%)
+      &:hover >.option_field
+        animation: rotate-in 200ms ease-in forwards
+        @keyframes rotate-in
+          0%
+            transform: rotateX(90deg)
+          100%
+            transform: rotate(0)
+
+      .map_name
+        position: absolute
+        font-size: 2em
+        left: 0
+        bottom: 0
+        width: 100%
+        height: 2em
+        background: #5aa
+
+      .option_field
+        position: absolute
+        top: 0
+        width: 100%
+        height: 4em
+        background: rgba(#5aa, 0.8)
+        transform: rotateX(90deg)
+        transform-origin: top
+
+        .o_field
+          float: left
+          display: inline-block
+          &:hover
+            padding-right: 2%
+            padding-left: 2%
+
+          .material-icons
+            font-size: 4em
+
+          &.delete
+            margin-left: 1%
+            float: left
+          &.edit
+            float: right
+      img
+        max-width: 100%
+        height: 80%
+
+      &:hover
+        cursor: default
+        filter: contrast(100%)
+    .btnNeueKarteHinzufuegen
+      padding: 1%
+      font-size: 1.5em
+      filter: grayscale(40%)
+      &:hover
+        cursor: default
+        border-radius: 10px 20px
+        filter: grayscale(0%)
+
+
+
+      .add
+        display: inline-block
+        font-size: 3em
+
+      p
+        display: inline-block
+        font-size: 1.3em
+
+
+    .neueKarte
+      height: 200px
+      width: 200px
+      background: #222
+
+#toggleSidebar
+  display: none
+
+  &:checked +.body
+    .toggleSidebar
+      left: ($widthSMenu) - 5%
+    .content
+      animation: openMenu 200ms ease-in-out forwards
+
+      @keyframes openMenu
+        0%
+          margin-left: 0
+        100%
+          margin-left: $widthSMenu
+
+.footer
+  margin-top: 0 !important
+
+
+@media only screen and (max-width: 480px)
+  .seitenmenue
+    width: 90% !important
+
+  #toggleSidebar
+    display: none
+    &:checked + .body
+      .toggleSidebar
+        left: 80%
+
+  @keyframes openMenu
+    0%
+      margin-left: 0
+    100%
+      margin-left: 90%

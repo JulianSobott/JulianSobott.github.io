@@ -1,0 +1,20 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+  <Julian Sobott> -- <Developer + Designer> -- <twitter>
+  <Marcel Tomasini> -- <Assistant> -- <twitter>
+  <Yannick Schneider> -- <Assistant> -- <twitter>
+  <Yannick Schmidberger> -- <Assistant> -- <twitter>
+  <Julian > -- <Assistant> -- <twitter>
+  <Jonas Gedamke> -- <Assistant> -- <twitter>
+  <David> -- <Assistant> -- <twitter>
+  <Tim Mueller> -- <Assistant> -- <twitter>
+# THANKS
+
+  <Katja Stoppel>
+
+# TECHNOLOGY COLOPHON
+
+  HTML5, CSS3, JS

@@ -1,0 +1,35 @@
+* { box-sizing: border-box; transition: all 300ms ease-in-out; }
+
+.container { box-shadow: 0px 3px 3px 2px #9D9D9D; }
+
+.fullScreen { width: calc(100vw - 16px) !important; height: calc(100vh - 16px) !important; box-shadow: 0px 3px 3px 2px #9D9D9D !important; z-index: 100 !important; position: fixed !important; top: 0 !important; left: 0 !important; margin: 8px !important; background: #069a86; animation: openFullScreen 300ms ease-in-out forwards; }
+@keyframes openFullScreen { 0% { transform: scale(0); }
+  100% { transform: scale(1); } }
+html, body { font-family: "Roboto", "Helvetica", sans-serif; margin: 0; padding: 0; height: 100%; font-size: 18px; }
+html header, body header { background: #ba000d; height: 10%; font-size: 2em; text-align: center; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26); }
+html header span, body header span { float: left; }
+html header h1, body header h1 { font-size: 0.7em; display: inline; color: rgba(33, 33, 33, 0.8); }
+html #listOfCars, body #listOfCars { width: 100%; text-align: center; height: 100%; background: rgba(255, 121, 97, 0.2); }
+html #listOfCars .carBtn, body #listOfCars .carBtn { width: 90vw; height: calc(50vw - 4vw); margin: 5vw; box-sizing: border-box; float: left; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26); border-radius: 3px; font-size: 24px; padding: 5% 5%; hyphens: auto; word-wrap: normal; word-break: break-all; overflow: hidden; background: #f44336; border: 0px; color: rgba(33, 33, 33, 0.9); }
+html #fuel #carNameH2, body #fuel #carNameH2 { width: 100%; background: linear-gradient(45deg, rgba(22, 9, 85, 0.84), #160955, #00BDA0); color: #A198CD; text-align: center; margin: 0; }
+html #fuel input, body #fuel input { height: 2em; font-size: 1em; width: 98%; padding: 1%; margin-top: 10%; border-radius: 5px 3px; }
+html #fuel input:focus, body #fuel input:focus { border: 2px solid #2100fa; }
+html #fuel input.valid, body #fuel input.valid { border: 2px solid #00f702; background: rgba(0, 247, 2, 0.3); }
+html #fuel input.invalid, body #fuel input.invalid { border: 2px solid red; background: rgba(255, 0, 0, 0.3); }
+html #fuel button, body #fuel button { border-radius: 50%; font-size: 3em; background: #878787; float: right; margin: 5% 10%; }
+html #fuel button[name="submit"], body #fuel button[name="submit"] { color: green; }
+html #fuel button[name="clear"], body #fuel button[name="clear"] { color: red; }
+html #home, body #home { height: 90%; overflow-y: hidden; }
+html #home .closeFullScreen, body #home .closeFullScreen { z-index: 1010; position: fixed; top: 0; right: 0; font-size: 24px; line-height: 24px; height: 30px; width: 30px; text-align: center; font-style: normal; background: rgba(26, 24, 32, 0.92); color: #D70404; border-radius: 50%; padding: 5px; }
+html #home .homeContainer, body #home .homeContainer { box-sizing: border-box; width: calc(100% - 8px); height: calc(50% - 8px); margin: 4px; position: relative; overflow: hidden; z-index: 10; }
+html #home .homeContainer .homeContainer_header, body #home .homeContainer .homeContainer_header { background: rgba(0, 2, 200, 0.79); height: 30px; line-height: 30px; text-align: center; position: fixed; width: inherit; }
+html #home .homeContainer .homeContainer_header h2, body #home .homeContainer .homeContainer_header h2 { margin: 0; color: #f4f4f4; font-size: 0.7em; }
+html #home .homeContainer .homeContainer_body, body #home .homeContainer .homeContainer_body { margin-top: 30px; width: 100%; overflow: auto; }
+html #home .homeContainer .carStatistics, body #home .homeContainer .carStatistics { box-sizing: border-box; width: calc(50% - 10px); margin: 5px 10px; height: calc(100% - 40px); border: 1px solid #9D9D9D; position: absolute; }
+html #home .homeContainer .carStatistics .carHeader, body #home .homeContainer .carStatistics .carHeader { background: rgba(203, 26, 42, 0.79); height: 15px; line-height: 15px; text-align: center; position: fixed; width: 100%; position: absolute; font-size: 13px; color: #f4f4f4; }
+html #home .homeContainer .carStatistics:nth-child(1), body #home .homeContainer .carStatistics:nth-child(1) { margin-left: 1%; }
+html #home .homeContainer .carStatistics:nth-child(2), body #home .homeContainer .carStatistics:nth-child(2) { margin-left: 51%; }
+html #home .homeContainer .carStatistics:nth-child(3), body #home .homeContainer .carStatistics:nth-child(3) { margin-left: 101%; }
+html #home .homeContainer .carStatistics:nth-child(4), body #home .homeContainer .carStatistics:nth-child(4) { margin-left: 151%; }
+html #home .homeContainer .carStatistics:nth-child(5), body #home .homeContainer .carStatistics:nth-child(5) { margin-left: 201%; }
+html #home .cars, body #home .cars { overflow: scroll; }

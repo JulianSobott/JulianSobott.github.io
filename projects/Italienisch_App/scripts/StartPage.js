@@ -4,11 +4,13 @@ var actualPath = [];
 var level = 0;
 var pathStr;
 var searchPrecision = 0;
+let vocabulary;
 
+let isLoaded = false;
 $(document).ready(function() {
   init();
-  $('#categorieContainer').on('click', ".categorie", function() {
-    openLowerLevel(this.value);
+  $('#categorieContainer').on('click touch', ".categorie", function(e) {
+    openLowerLevel(this.value, e);
   });
   $('.back').click(function() {
     back();
@@ -28,16 +30,17 @@ $(document).ready(function() {
       $('.searchContainer').removeClass('open');
       $('.searchField').val("");
       $('.search_button').attr('src', 'images/icons/search.svg');
+      showCategories();
     }else{
       $('.searchField').addClass('open');
       $('#categorieContainer').addClass('openSearch');
       $('.searchContainer').addClass('open');
       $('.search_button').attr('src', 'images/icons/close.svg');
+      $('.searchField').focus();
     }
 
   });
   $('.searchField').keyup( function () {
-    console.log($('.searchField').val());
     $('.element').remove();
     if ($('.searchField').val().length > searchPrecision) {
       search($('.searchField').val());
@@ -51,43 +54,72 @@ $(document).ready(function() {
 });
 
 function init() {
-  showCategories();
+  loadCategories
+    .then(()=>{
+      showCategories();
+      //addListeners();
+      $('.loaderContainer').remove();})
+    .catch((error)=>{
+    console.log(error);
+  })
+  //showCategories();
   addListeners();
+  $('.back').fadeOut();
   $('.headerText').html("Alle Kategorien");
 }
 
-function showCategories() {
-  $.getJSON("Vocabulary2.json", function( data ) {  // TODO: Maybe execute just once this function
-    pathStr = "";
-    for (var i = 0; i < level; i++) {
-      pathStr += "."+actualPath[i];
-    }
-    console.log(pathStr);
-    data = eval("data"+pathStr);
-    $.each( data, function(key, val) {
-      if(isNaN(key)){
-        addElementToDom(key, "categorie");
-      }else {
-        addElementToDom(val, "phrase");
-      }
-    });
-  }).done(function () {
-    designCategories();
+let loadCategories = new Promise((resolve, reject)=>{
+  $.getJSON("Vocabulary.json" , (data)=> {
+    vocabulary = data;
+  }).done(()=>{
+    resolve("Loaded");
+  }).fail((err)=>{
+    let error = new Error("Failed to Load Data");
+    reject(error);
   });
+});
+
+function showCategories() {
+  // $.getJSON("Vocabulary2.json", function( data ) {  // TODO: Maybe execute just once this function
+  //   pathStr = "";
+  //   for (var i = 0; i < level; i++) {
+  //     pathStr += "."+actualPath[i];
+  //   }
+  //   console.log(pathStr);
+  //   data = eval("data"+pathStr);
+  //   $.each( data, function(key, val) {
+  //     if(isNaN(key)){
+  //       addElementToDom(key, "categorie");
+  //     }else {
+  //       addElementToDom(val, "phrase");
+  //     }
+  //   });
+  // }).done(function () {
+  //   designCategories();
+  // });
+  $('#categorieContainer').children().remove();
+  $.each( vocabulary, function(key, val) {
+    //console.log(key);
+    if(isNaN(key)){
+      addElementToDom(key, "categorie");
+    }else {
+      addElementToDom(val, "phrase");
+    }
+  });
+  designCategories();
 }
 
 function addElementToDom(value, type) {
   if (type == "categorie") {
-    var categorie = "<input type='button' class='categorie element "+value+"' value='"+value+"'></input>";
+    var categorie = "<button class='categorie element "+value+"' value='"+value+"'>"+value+"</button>";
     $("#categorieContainer").append(categorie);
   }else {
-    var element = "<div class='vocElement element'><b>"+value[0]+" </b><br><i> "+value[1]+"</i></div>";
+    var element = '<div class="vocElement element"><b>'+value[0]+' </b><br><i> '+value[1]+'</i></div>';
     $("#categorieContainer").append(element);
   }
 }
 function designCategories() {
   $('.categorie').insertBefore('.vocElement:first-child');
-
   var numCategories = document.getElementsByClassName('categorie');
   numCategories = numCategories.length;
   let index = 0;
@@ -100,19 +132,33 @@ function designCategories() {
 
 }
 
-function openLowerLevel(categorie) {
-  actualPath[level] = categorie;
-  showCategories();
+function openLowerLevel(categorie, e) {
+  $('.back').fadeIn();
+  $('#categorieContainer').children().remove();
+  $('#categorieContainer').removeClass("closeContainer");
+  $('#categorieContainer').addClass("open");
+  $.each( vocabulary[categorie], function(key, val) {
+    // console.log(val);
+    if(isNaN(key)){
+      // console.log("if");
+      addElementToDom(key, "categorie");
+    }else {
+      // console.log("else");
+      addElementToDom(val, "phrase");
+    }
+  });
+  designCategories();
   level++;
   $('.headerText').html(categorie);
-  $('.categorie').remove();
-  $('.vocElement').remove();
 }
 
 function back() {
   if (level != 0) {
     level--;
   }
+  $('#categorieContainer').removeClass("open");
+  $('#categorieContainer').addClass("closeContainer");
+  $('.back').fadeOut();
   $('.categorie').remove();
   $('#categorieContainer').children().remove();
   $('.headerText').html("Alle Kategorien");
@@ -121,14 +167,11 @@ function back() {
 
 function search(value) {
   value = value.toLowerCase();
-  $.getJSON("Vocabulary2.json", function( data ){
-    eachSearch(value, data);
-  });
+  eachSearch(value, vocabulary);
 };
 
 function eachSearch(value, data){
   $.each( data, function(key, val) {
-    console.log("val[0]: "+ val[0]+ " -- val[1]: "+ val[1]);
     if (typeof key === 'string') {
       if(key.toLowerCase().indexOf(value) !== -1){
         //addElementToDom(key, "categorie");
@@ -141,7 +184,6 @@ function eachSearch(value, data){
       valArray.push(val[0]);
       valArray.push(val[1]);
        addElementToDom(valArray, "phrase");
-       console.log("addedval: "+ valArray);
       }
     }else{
       //console.log(val);

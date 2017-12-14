@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="de">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="">
+    <meta name="description" content="Diese App bietet alle wichtigenVokabeln un Phrasen, sortiert nach Kategorien">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" sizes="192x192" href="images/icons/logo.png">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <title>Italienisch App</title>
 
     <!-- Disable tap highlight on IE -->
@@ -16,13 +16,13 @@
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Web Starter Kit">
+    <meta name="application-name" content="Italienisch Urlaub">
     <!-- <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png"> -->
 
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Italienisch App">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#2F3BA2">
+    <meta name="apple-mobile-web-app-title" content="Italienisch Urlaub">
     <!-- <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png"> -->
 
     <!-- Tile icon for Win8 (144x144 + tile color) -->
@@ -31,11 +31,9 @@
 
     <!-- Color the status bar on mobile devices -->
     <meta name="theme-color" content="#2F3BA2">
-    <link rel="stylesheet" href="https://juliansobott.github.io/projects/Librarys/myStyles-1.0.0.css">
-    <link rel="stylesheet" href="CSS/StartPage.css">
-    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
-    <!--<script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
-    <script src="JS/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" href="css/myStyles-1.0.0.css">
+    <link rel="stylesheet" href="css/StartPage.css">
+    <script src="scripts/jquery-3.2.1.min.js"></script>
 
   </head>
   <body>
@@ -45,43 +43,20 @@
 
       </div>
     </div>
+    <div class="loaderContainer"><div class="loader"></div></div>
+
     <div class="searchContainer">
       <input type="search" name="search" value="" placeholder="Vokabel Suchen" class="searchField">
-      <img class="floating_button search_button material-icons" src="images/icons/search.svg" alt="search">
+      <label for="search"><img class="floating_button search_button material-icons" src="images/icons/search.svg" alt="search"></label>
+
     </div>
     <div id="categorieContainer">
 
     </div>
-    <div class="admin addItemContainer">
-      <input type="button" class="button addItem admin" name="addItem" value=" + Add Item + ">
-
-        <div class="addTextItemEditor">
-          <h3>Text hinzufügen</h3>
-          <div class="close closeItemEditor">
-            +
-          </div>
-          <form class="">
-            <input type="text" class="addItemTf tfGerman" name="tfGerman" value="" placeholder="Deutsch">
-            <input type="text" class="addItemTf tfItalian" name="tfItalian" value="" placeholder="Italienisch">
-            <input type="submit" class="submitItem submitText" name="submitText" value="Hinzufügen">
-          </form>
-        </div>
-      <div class="addCategorieItemEditor">
-        <h3>Kategorie hinzufügen</h3>
-        <div class="close closeItemEditor">
-          +
-        </div>
-        <form class="">
-          <input type="text" class="addItemTf tfCategorie" name="tfCategorie" value="" placeholder="Kategorie">
-          <input type="submit" class="submitItem submitCategorie" name="submitCategorie" value="Hinzufügen">
-        </form>
-      </div>
 
     </div>
-    <script src="https://juliansobott.github.io/projects/Librarys/myFunctions-1.0.0.js" charset="utf-8"></script>
-    <script src="JS/main.js" async></script>
-    <script src="JS/StartPage.js" async></script>
-    <script src="JS/Admin.js" async></script>
+    <script src="scripts/myFunctions-1.0.0.js" charset="utf-8"></script>
+    <script src="scripts/StartPage.js" async></script>
 
   </body>
 </html>

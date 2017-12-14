@@ -1,0 +1,484 @@
+{
+  "Restaurant": [
+    [
+      "German vocabulary3",
+      "Italian Vocabulary3"
+    ],
+    [
+      "German vocabulary4",
+      "Italian Vocabulary4"
+    ]
+  ],
+  "Hotel": [
+    [
+      "Apotheke",
+      "la farmacia"
+    ]
+  ],
+  "Sport": [
+    [
+      "Welche Ausrüstung braucht man dafür?",
+      "Qual attrezzature avete bisogno per questo?"
+    ],
+    [
+      "Wer will mitmachen?",
+      "Chi vuole aderire?"
+    ],
+    [
+      "Wo kann man das machen?",
+      "Dove fare questionario?"
+    ],
+    [
+      "Wie viel kostet das?",
+      "Quanto costa?"
+    ],
+    [
+      "Wann ist das?",
+      "Quando é il?"
+    ],
+    [
+      "Wo bekommt man das?",
+      "Dove si ottiene la?"
+    ],
+    [
+      "Wie wird das Wetter morgen?",
+      "Quale sará il temp domani?"
+    ],
+    [
+      "Wo kann man hier ...?",
+      "Dove si puó ... qui?"
+    ],
+    [
+      "Ich möchte ... mieten/ reservieren.",
+      "Vorrei prenotare/ affittare..."
+    ],
+    [
+      "Segeln",
+      "andare in barca a vela"
+    ],
+    [
+      "Fußball spielen",
+      "giocare a calcio"
+    ],
+    [
+      "Tennis   spielen",
+      "giocare a tennis"
+    ],
+    [
+      "Tischtennis spielen",
+      "giocare a ping-pong"
+    ],
+    [
+      "Volleyball spielen",
+      "giocare a pallavolo"
+    ],
+    [
+      "Handball spielen",
+      "giocare a palla a mano"
+    ],
+    [
+      "Basketball spielen",
+      "giocare a pallacanestro"
+    ],
+    [
+      "Hockey spielen",
+      "giocare a hockey sul prato"
+    ],
+    [
+      "Schwimmen",
+      "nuotare"
+    ],
+    [
+      "Surfen",
+      "fare surfing"
+    ],
+    [
+      "Tauchen",
+      "fare nuoto subacqueo"
+    ],
+    [
+      "Wandern",
+      "fare escursioni"
+    ],
+    [
+      "Parasailen",
+      "fare parasailing"
+    ],
+    [
+      "Fahrrad fahren",
+      "andare in bicicletta"
+    ],
+    [
+      "Regnerisch",
+      "piovoso"
+    ],
+    [
+      "Sonnig",
+      "soleggiato"
+    ],
+    [
+      "Neblig",
+      "nebbioso"
+    ],
+    [
+      "Schneefall",
+      "neve"
+    ],
+    [
+      "Wechselhaft",
+      "variabile"
+    ],
+    [
+      "Angeln",
+      "prescare"
+    ],
+    [
+      "Badminton",
+      "il badminton"
+    ],
+    [
+      "Billard",
+      "il biliardo"
+    ],
+    [
+      "Golf",
+      "il golf"
+    ],
+    [
+      "Kajak",
+      "il kayak"
+    ],
+    [
+      "Kanu",
+      "la canoa"
+    ],
+    [
+      "Reiten",
+      "cavalcare"
+    ]
+  ],
+  "flirtare": [
+    [
+      "Wie heißt du?",
+      "Come ti chiami/Come si chiama?"
+    ],
+    [
+      "Ich heiße...",
+      "Mi chiamo..."
+    ],
+    [
+      "Woher kommst du/Woher kommen sie?",
+      "Di dove sei/Di dov´è?"
+    ],
+    [
+      "Ich komme aus Deutschland.",
+      "Vengo dalla Germania"
+    ],
+    [
+      "Wie alt bist du/sind sie?",
+      "Quanti anni hai/ha?"
+    ],
+    [
+      "Waren sie schon einmal in Deutschland?",
+      "É stato/stata mai in Germania?"
+    ],
+    [
+      "Können sie mir bitte helfen?",
+      "Mi può aiutare, per favore?"
+    ],
+    [
+      "Sprichst du/Sprechen Sie Deutsch?",
+      "Parli/Parla tedesco?"
+    ],
+    [
+      "Ich spreche nur wenig Italienisch.",
+      "Parlo soltanto un po´d´italiano."
+    ],
+    [
+      "Wie heißt das auf Italienisch?",
+      "Come se dice italiano?"
+    ],
+    [
+      "Vielen Dank.",
+      "Tante grazie."
+    ],
+    [
+      "Danke, das ist sehr nett von Ihnen.",
+      "Grazie, è molto gentile (da parta Sua)."
+    ],
+    [
+      "Es tut mir leid.",
+      "Mi dispiace."
+    ],
+    [
+      "Das macht nichts.",
+      "Non fa niente."
+    ],
+    [
+      "Guten Tag",
+      "Buongiorno"
+    ],
+    [
+      "Guten Morgen",
+      "Buongiorno"
+    ],
+    [
+      "Guten Abend",
+      "Buonasera"
+    ],
+    [
+      "Auf Wiedersehen",
+      "Arrivederci"
+    ],
+    [
+      "Gute Nacht",
+      "Buonanotte"
+    ],
+    [
+      "Ich mag dich sehr gerne.",
+      "Ti voglio bene."
+    ],
+    [
+      "Hast du eine Freundin?",
+      "Hai una ragazza?"
+    ],
+    [
+      "Bist du verheiratet?",
+      "Sei sposato/a?"
+    ],
+    [
+      "Ich habe mich in dich verliebt.",
+      "Mi sono innamorato di te."
+    ],
+    [
+      "Ich möchte mit dir schlafen.",
+      "Voglio fare l’amore con te."
+    ],
+    [
+      "Hast du morgen schon etwas vor?",
+      "Hai già un impegno per domani?"
+    ],
+    [
+      "Treffen wir uns heute Abend / morgen?",
+      "Incontriamoci stasera / domani?"
+    ],
+    [
+      "Wann / Wo treffen wir uns?",
+      "Quando / Dove ci incontriamo?"
+    ],
+    [
+      "Schön",
+      "Bello/a"
+    ],
+    [
+      "Nett",
+      "Gentile"
+    ],
+    [
+      "Toll",
+      "Strabello/a"
+    ],
+    [
+      "Kann ich deine Nummer haben?",
+      "Mi dai il tuo numero telefonico?"
+    ],
+    [
+      "Du hast wirklich ein süßes Lächeln.",
+      "Hai veramente un sorriso dolce."
+    ],
+    [
+      "Möchtest du etwas trinken?",
+      "Vorresti qualcosa da bere?"
+    ],
+    [
+      "Sollen wir uns mal wieder treffen?",
+      "Hai voglia di incontrarmi di nuovo?"
+    ],
+    [
+      "Deine Augen sind einfach wunderschön.",
+      "I tuoi occhi sono meravigliosi / bellissimi."
+    ],
+    [
+      "Hast du heute Abend schon etwas vor?",
+      "Hai già un impegno per stasera?"
+    ],
+    [
+      "Hast du einen Freund?",
+      "Hai già un ragazzo?"
+    ],
+    [
+      "Zu mir oder zu dir?",
+      "A casa mia o a casa tua?"
+    ]
+  ],
+  "all’ allbergo": [
+    [
+      "Ich habe ein Zimmer auf … reserviert.",
+      "Ho prenotato una camera …"
+    ],
+    [
+      "Wo ist das Zimmer",
+      "Dov`è la camera"
+    ],
+    [
+      "Wo ist die Toilette",
+      "Dov`è   il bagno"
+    ],
+    [
+      "Wo ist das Restaurant",
+      "Dov`è   il ristorante"
+    ],
+    [
+      "Keller",
+      "interrato"
+    ],
+    [
+      "Erdgeschoss",
+      "pianterreno"
+    ],
+    [
+      "1. Geschoss",
+      "prima piano"
+    ],
+    [
+      "2. Geschoss",
+      "secondo piano"
+    ],
+    [
+      "Wir haben unseren Schlüssel verloren.",
+      "Abbiamo perso la nostra chiave."
+    ],
+    [
+      "Name",
+      "nome"
+    ],
+    [
+      "Nachname",
+      "cognome"
+    ],
+    [
+      "Ankunftstag",
+      "Giorno di arrivo"
+    ],
+    [
+      "Abfahrtstag",
+      "Giorno di partenza"
+    ],
+    [
+      "Geburtstag",
+      "Data di nascita"
+    ],
+    [
+      "Nationalität",
+      "nazionalità"
+    ],
+    [
+      "Postleitzahl",
+      "codice postate"
+    ],
+    [
+      "Doppelbett",
+      "letto doppio"
+    ],
+    [
+      "Einzelbett",
+      "letto singolo"
+    ],
+    [
+      "Strom",
+      "la corrente"
+    ],
+    [
+      "Parkplatz",
+      "il campeggio"
+    ],
+    [
+      "Doppelzimmer",
+      "la camera doppia"
+    ],
+    [
+      "Einzelzimmer",
+      "la camera singola"
+    ],
+    [
+      "Dusche",
+      "la doccia"
+    ],
+    [
+      "Fenster",
+      "la finestra"
+    ],
+    [
+      "Fernseher",
+      "la televisione"
+    ],
+    [
+      "Heizung",
+      "il riscaldamento"
+    ],
+    [
+      "Klimaanlage",
+      "l´aria condizionata"
+    ],
+    [
+      "Radio",
+      "la radio"
+    ],
+    [
+      "Telefon",
+      "il telefono"
+    ],
+    [
+      "Haben sie noch ein Zimmer mit… ?",
+      "Ha ancora una camera con… ?"
+    ],
+    [
+      "…mit Blick aufs Meer?",
+      "…con vista sul mare?"
+    ],
+    [
+      "Ich möchte ein Zimmer für zwei Nächte.",
+      "Vorrei una camera per due notti."
+    ],
+    [
+      "Wie viel kostet ein Zimmer?",
+      "Quanta costa una camera?"
+    ],
+    [
+      "Haben sie ein billigeres Zimmer?",
+      "Ha una camera meno costosa?"
+    ],
+    [
+      "Ist das Frühstück im Preis inbegirffen?",
+      "La prima colazione è inclusa nel prezzo?"
+    ],
+    [
+      "Wann ist Frühstückszeit?",
+      "A che ora c´è la prima collaziona?"
+    ],
+    [
+      "Ist das Hotel die ganze Nacht geöffnet?",
+      "È aperto tutta la notte l’albergo?"
+    ],
+    [
+      "Wir reisen morgen ab",
+      "Partiamo domani."
+    ],
+    [
+      "Bis wie viel Uhr müssen wir das Zimmer räumen",
+      "A che ora dobbiamo lasciare la camera?"
+    ],
+    [
+      "Die Rechnung bitte",
+      "il conto per favore"
+    ],
+    [
+      "Es fehlen Handtücher",
+      "Mancano degli asciugamani"
+    ],
+    [
+      "Sind Haustiere erlaubt?",
+      "Si possono parature animali?"
+    ]
+  ]
+}

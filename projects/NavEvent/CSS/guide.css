@@ -1,6 +1,2 @@
-html, body {
-  height: 100%; }
-  html .guideContent, body .guideContent {
-    padding-bottom: 10%; }
-
-/*# sourceMappingURL=guide.css.map */
+html, body { height: 100%; }
+html .guideContent, body .guideContent { padding-bottom: 10%; }

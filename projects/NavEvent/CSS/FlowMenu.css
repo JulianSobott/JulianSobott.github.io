@@ -1,121 +1,51 @@
-.flow_menu {
-  position: relative;
-  background: #999999;
-  width: 100%;
-  height: 1000px;
-  padding-bottom: 3%; }
-  .flow_menu #counter {
-    height: 45px;
-    display: flex;
-    position: absolute;
-    margin-left: 45%;
-    margin-top: 980px;
-    z-index: 5; }
-    .flow_menu #counter span {
-      display: block;
-      height: 12px;
-      width: 12px;
-      margin: 5px;
-      border-radius: 50%;
-      background: #a71; }
-      .flow_menu #counter span.actual {
-        animation: actual 1200ms ease-in-out forwards; }
-@keyframes actual {
-  0% {
-    background: #a71; }
-  100% {
-    background: blue; } }
-  .flow_menu .slide {
-    position: absolute;
-    width: 100%;
-    height: 1000px; }
-    .flow_menu .slide.is-active {
-      opacity: 1;
-      z-index: 1; }
+.flow_menu { position: relative; background: #999999; width: 100%; height: 1000px; padding-bottom: 3%; }
+.flow_menu #counter { height: 45px; display: flex; position: absolute; margin-left: 45%; margin-top: 980px; z-index: 5; }
+.flow_menu #counter span { display: block; height: 12px; width: 12px; margin: 5px; border-radius: 50%; background: #a71; }
+.flow_menu #counter span.actual { animation: actual 1200ms ease-in-out forwards; }
+@keyframes actual { 0% { background: #a71; }
+  100% { background: blue; } }
+.flow_menu .slide { position: absolute; width: 100%; height: 1000px; }
+.flow_menu .slide.is-active { opacity: 1; z-index: 1; }
 
-.slide1 {
-  background: #c7cdc2; }
+.slide1 { background: #1ca801; }
 
-.slide2 {
-  background: #22f90d; }
+.slide2 { background: #04746c; }
 
-.slide3 {
-  background: #b8af9b; }
+.slide3 { background: #21299f; }
 
-.slide4 {
-  background: #dae0c3; }
+.slide4 { background: #718ea6; }
 
-.material-icons.pfeil {
-  position: absolute;
-  font-size: 80px;
-  margin-top: 460px;
-  z-index: 3; }
+.material-icons.pfeil { position: absolute; font-size: 80px; margin-top: 460px; z-index: 3; }
 
-.material-icons.pfeil:hover {
-  cursor: pointer;
-  font-size: 90px; }
+.material-icons.pfeil:hover { cursor: pointer; font-size: 90px; }
 
-.rechtspfeil {
-  right: 10px; }
+.rechtspfeil { right: 10px; }
 
-.linkspfeil {
-  float: left; }
+.linkspfeil { float: left; }
 
-.left-out {
-  animation: left-out 1200ms ease-in-out forwards; }
+.left-out { animation: left-out 1200ms ease-in-out forwards; }
 
-.left-in {
-  animation: left-in 1200ms ease-in-out forwards; }
+.left-in { animation: left-in 1200ms ease-in-out forwards; }
 
-@keyframes left-out {
-  0% {
-    transform: translate(opx); }
-  100% {
-    transform: translate(100%, 0px); } }
-@keyframes left-in {
-  0% {
-    transform: translate(-100%); }
-  80% {
-    transform: translate(50px, 0px); }
-  100% {
-    transform: translate(0px); } }
-.right-out {
-  animation: right-out 1200ms ease-in-out forwards; }
+@keyframes left-out { 0% { transform: translate(opx); }
+  100% { transform: translate(100%, 0px); } }
+@keyframes left-in { 0% { transform: translate(-100%); }
+  80% { transform: translate(50px, 0px); }
+  100% { transform: translate(0px); } }
+.right-out { animation: right-out 1200ms ease-in-out forwards; }
 
-.right-in {
-  animation: right-in 1200ms ease-in-out forwards; }
+.right-in { animation: right-in 1200ms ease-in-out forwards; }
 
-@keyframes right-out {
-  0% {
-    transform: translate(opx); }
-  100% {
-    transform: translate(-100%, 0px); } }
-@keyframes right-in {
-  0% {
-    transform: translate(100%); }
-  80% {
-    transform: translate(-50px, 0px); }
-  100% {
-    transform: translate(0px); } }
-.fadeOut {
-  animation: fadeOut 400ms ease-in-out forwards; }
+@keyframes right-out { 0% { transform: translate(opx); }
+  100% { transform: translate(-100%, 0px); } }
+@keyframes right-in { 0% { transform: translate(100%); }
+  80% { transform: translate(-50px, 0px); }
+  100% { transform: translate(0px); } }
+.fadeOut { animation: fadeOut 400ms ease-in-out forwards; }
 
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-    transform: translate(opx); }
-  100% {
-    opacity: 0;
-    transform: rotateZ(90deg) rotateX(90deg); } }
-.fadeIn {
-  animation: fadeIn 400ms ease-in-out forwards; }
+@keyframes fadeOut { 0% { opacity: 1; transform: translate(opx); }
+  100% { opacity: 0; transform: rotateZ(90deg) rotateX(90deg); } }
+.fadeIn { animation: fadeIn 400ms ease-in-out forwards; }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: rotateZ(90deg) rotateX(90deg); }
-  100% {
-    opacity: 1;
-    transform: translate(opx); } }
-
-/*# sourceMappingURL=FlowMenu.css.map */
+@keyframes fadeIn { 0% { opacity: 0; transform: rotateZ(90deg) rotateX(90deg); }
+  100% { opacity: 1; transform: translate(opx); } }

@@ -1,13 +1,20 @@
+a, a:active, a:focus, input, input:active, input:focus
+  outline: none
+
+
 body
   display: grid
-  grid-template: "welcome projects" 40% "search search" 20% "links links" 40% / 50% 50%
+  grid-template: "welcome" 40% "search" 30% "links" 30% / 100%
   //grid-gap: 50px
   width: 100vw
   height: 100vh
   overflow: hidden
   margin: 0
   padding: 0
-  animation: changeBackground 100000ms ease-in-out infinite
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  //animation: changeBackground 100000ms ease-in-out infinite
   @keyframes changeBackground
     0%
       background: #4f5
@@ -26,18 +33,18 @@ body
     grid-area: welcome
     display: block
     text-align: center
-    font-weight: bold
     font-family: sans-serif
-    text-shadow: 2px 2px #55d
-    color: rgba(#22a, 0.7)
+    text-shadow: 2px 4px 1px rgba(#36acb8, 0.5)
+    color: rgba(#dd2c00, 0.7)
     font-stretch: expanded
-    letter-spacing: 5px
     overflow: hidden
     max-width: 100%
+    max-height: 250px
+    padding-top: 5%
 
   .projects
     position: relative
-    display: grid
+    display: none
     grid-area: projects
     grid-template-columns: 1fr
     grid-template-rows: repeat(4, .5fr)
@@ -57,57 +64,70 @@ body
       box-shadow: 0 0 3px 1px rgba(#A1A1A1, 0.2),  0 0 3px 2px rgba(#A1A1A1, 0.4)
       background-size: cover
       margin: 20px 0
+      text-decoration: none
+      color: black
+      text-align: center
+      line-height: 100px
+
 
   .googleSearch
     grid-area: search
     display: grid
-    grid-template-columns: 5fr 1fr
-    grid-gap: 20px
-    margin: auto
+    grid-template-columns: 6fr 1fr
+    grid-gap: 0
+    margin: 0 10%
     vertical-align: middle
+    height: 2rem
     input:first-of-type
       display: inline-block
       border: 0px
-      border-radius: 5px
+      border-radius: 0px
       box-shadow: 0 10px 20px rgba(0,0,0 , 0.2), 0 8px 16px rgba(0,0,0 , 0.4)
       background: rgba(250, 250, 250, 0.5)
       box-sizing: border-box
-      font-size: 2em
+      font-size: 1.5em
       vertical-align: middle
     input:last-of-type
       display: inline-block
       border: 0px
-      border-radius: 5px
-      background: rgba(0, 0, 0, 0.7)
-      box-shadow: 0 5px 10px rgba(0,0,0 , 0.2), 0 4px 8px rgba(0,0,0 , 0.4)
-      box-sizing: border-box
+      background: rgba(250, 250, 250, 0.5)
+      //box-shadow: 0 5px 10px rgba(0,0,0 , 0.2), 0 4px 8px rgba(0,0,0 , 0.4)
+      //box-sizing: border-box
       font-size: 2.5em
+      width: 50px
       color: rgba(250, 250, 250, 0.7)
       text-align: center
       vertical-align: middle
-      &:active
-        box-shadow: -2px -2px 3px 1px rgba(#bbb, 0.7), 1px 1px 1px rgba(0, 0, 0, 0.7)
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: center
+      border: 0
+      outline: 0
+      &:active, &:focus
+        border: 0
+        outline: 0
       &:hover
-        box-shadow: 1px 1px 1px rgba(0,0,0 , 0.2), 2px 2px 3px 1px rgba(0,0,0 , 0.4)
+        transform: rotate(2deg) scale(1.08)
 
   .linksContainer
     display: grid
     grid-area: links
-    grid-template-columns: repeat(5, 1fr)
-    grid-template-rows: 1fr
+    grid-template-columns: repeat(8, 1fr)
+    grid-template-rows: repeat(1, 1fr)
     grid-gap: 20px
-    margin: 0 10%
+    margin: 0 8%
     .link
       display: block
+      background: rgba(#A1A1A1, 0.0)
       width: 100%
-      //height: 100px
-      padding-bottom: 100%
-      background: rgba(#A1A1A1, 0.1)
+      height: 100%
+      max-width: 100px
+      max-height: 100px
       border: 0
-      border-radius: 5px
-      box-shadow: 0 0 3px 1px rgba(#A1A1A1, 0.2),  0 0 3px 2px rgba(#A1A1A1, 0.4)
+      //box-shadow: 0 0 3px 1px rgba(#A1A1A1, 0.2),  0 0 3px 2px rgba(#A1A1A1, 0.4)
       background-size: contain
       background-repeat: no-repeat
+      background-position: center
 
   .test
     position: relative

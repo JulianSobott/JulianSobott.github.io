@@ -25,7 +25,7 @@ $(document).ready(function () {
   }else if (hour>16 && hour<21) {
     welcomeText = "Guten Abend";
     document.body.style.backgroundImage = "url('img/backgrounds/evening_" + image_number + ".jpg')";
-  }else if (hour>20) {
+  }else if (hour>20 || hour <= 4) {
     welcomeText = "Gute Nacht";
     document.body.style.backgroundImage = "url('img/backgrounds/night_" + image_number + ".jpg')";
   }else {
